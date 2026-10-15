@@ -36,10 +36,10 @@ class _Tab2ScreenState extends State<Tab2Screen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _buildFilterChip('All', 0),
-                _buildFilterChip('Active', 1),
-                _buildFilterChip('Popular', 2),
-                _buildFilterChip('Archived', 3),
+                _buildFilterChip('To Do', 0),
+                _buildFilterChip('In Progress', 1),
+                _buildFilterChip('In Review', 2),
+                _buildFilterChip('Done', 3),
               ],
             ),
           ),
@@ -70,7 +70,7 @@ class _Tab2ScreenState extends State<Tab2Screen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Backlog Item #${idx + 101}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text(const ['OAuth 2.0 Integration', 'Redesign Dashboard UI', 'PostgreSQL Migration', 'Security Audit Scan', 'Release v1.4.0 Build'][idx], style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                       const SizedBox(height: 4),
                       Text('Category: Tier ${idx + 1} • Updated 2h ago', style: const TextStyle(color: Colors.white60, fontSize: 12)),
                     ],

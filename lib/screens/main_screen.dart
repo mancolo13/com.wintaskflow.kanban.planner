@@ -16,10 +16,10 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = const [
-    Tab1Screen(),
     Tab2Screen(),
-    Tab3Screen(),
+    Tab1Screen(),
     Tab4Screen(),
+    Tab3Screen(),
   ];
 
   @override
@@ -33,26 +33,25 @@ class _MainScreenState extends State<MainScreen> {
         indicatorColor: AppTheme.primaryColor.withValues(alpha: 0.2),
         destinations: [
         NavigationDestination(
-          icon: const Icon(Icons.view_kanban_outlined),
-          selectedIcon: const Icon(Icons.view_kanban, color: AppTheme.primaryColor),
-          label: 'Board',
-        ),
-        NavigationDestination(
           icon: const Icon(Icons.format_list_bulleted_outlined),
           selectedIcon: const Icon(Icons.format_list_bulleted, color: AppTheme.primaryColor),
           label: 'Backlog',
         ),
         NavigationDestination(
-          icon: const Icon(Icons.flag_outlined),
-          selectedIcon: const Icon(Icons.flag, color: AppTheme.primaryColor),
-          label: 'Sprints',
+          icon: const Icon(Icons.view_kanban_outlined),
+          selectedIcon: const Icon(Icons.view_kanban, color: AppTheme.primaryColor),
+          label: 'Board',
         ),
         NavigationDestination(
           icon: const Icon(Icons.insights_outlined),
           selectedIcon: const Icon(Icons.insights, color: AppTheme.primaryColor),
           label: 'Metrics',
         ),
-
+        NavigationDestination(
+          icon: const Icon(Icons.flag_outlined),
+          selectedIcon: const Icon(Icons.flag, color: AppTheme.primaryColor),
+          label: 'Sprints',
+        ),
         ],
       ),
     );
